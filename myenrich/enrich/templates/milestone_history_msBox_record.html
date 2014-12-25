@@ -1,0 +1,11 @@
+{% for milestone in milestones %}
+    <div name="recordBox" id="mshBox_bodyleft_recordBox">
+        <p>{{ milestone.Date }}</p>
+        <p>{{ milestone.Content }}</p>
+        <div class="byline">
+            <div class="deleteMilestone" title="删除里程碑"></div>
+            <div class="editMilestone" title="编辑里程碑"></div>
+        </div>
+        <br>
+    </div>
+{% endfor %}

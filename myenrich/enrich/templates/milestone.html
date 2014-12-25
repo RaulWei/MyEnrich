@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="/static/css/flat-ui.css" />
+    <link type="text/css" rel="stylesheet" href="/static/css/rotateBall.css"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/enrichCss.css" />
+    <style type="text/css">
+        #timeline {width: 80%;height: 230px;overflow: hidden;margin-left: 10%;position: relative;background-color: #34495e;}
+        #dates {width: 760px;height: 60px;overflow: hidden;}
+        #dates li {list-style: none;float: left;width: 100px;height: 50px;font-size: 14px;text-align: center;background: url('biggerdot.png') center bottom no-repeat;}
+        #dates a {line-height: 48px;padding-bottom: 10px;}
+        #dates .selected {font-size: 18px;}
+        #issues {width: 760px;height: 300px;overflow: hidden;}
+        #issues li {width: 760px;height: 300px;list-style: none;float: left;}
+        #issues li h1 {color: #ffcc00;font-size: 42px;margin: 20px 0;text-shadow: #000 1px 1px 2px;}
+        #issues li p {color:#e6b450}
+    </style>
+    <script type="text/javascript" src="/static/javascript/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/static/javascript/jquery.timelinr-0.9.53.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $().timelinr({
+                autoPlay: 'true',
+                autoPlayDirection: 'forward',
+                startAt: 4
+            })
+        });
+    </script>
+</head>
+
+<body>
+{#<div name="blur">#}
+{#    <img src="/static/img/Blur-2.jpg" width="100%" height="100px">#}
+{#</div>#}
+<div name="msBox_top">
+{#    <div name="msIcon" class="loader"></div>#}
+    <div name="msNav" class="navbar navbar-inverse" id="msNav">
+        <ul class="nav">
+{#            <li><a class="loader"></a></li>#}
+            <li class="active">
+                <a href="#">今天</a>
+            </li>
+            <li><a href="/enrich/milestone_history">往日</a></li>
+        </ul>
+    </div>
+</div>
+<div name="msBox_body" id="msBox_body">
+    <div name="msBox_bodyleft" id="msBox_bodyleft">
+        <!--<button class="btn" >bodyleft</button>-->
+        <img src="/static/img/2.jpg" height="68%" width="92%">
+    </div>
+    <div name="msBox_bodyright" id="msBox_bodyright">
+        <div class="inlet_arrow_bg">&nbsp;</div>
+        <form method="post" enctype="multipart/form-data" id="milestone_form" style="display: inline">
+            <textarea rows="9" cols="70" class="form-control" name="msContent" id="msContent" style="resize: none"></textarea>
+            <div>
+                <input value="添加里程碑" class="btn btn-success " type="submit" style="margin-top: 10px; float: right" />
+            </div>
+        </form>
+    </div>
+</div>
+<div id="timeline">
+    <ul id="dates">
+        {% for ms in milestones %}
+            <li><a href="#{{ ms.Date }}">{{ ms.Date }}</a></li>
+        {% endfor %}
+    </ul>
+    <ul id="issues">
+        {% for ms in milestones %}
+            <li id="{{ ms.Date }}">
+                <p>{{ ms.Content }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{#<div name="msBox_record" id="msBox_record">#}
+{#    {% for milestone in milestones %}#}
+{#        <div>{{ milestone.Date }}</div>#}
+{#        <div>{{ milestone.Content }}</div>#}
+{#        <div></div>#}
+{#        <br>#}
+{#    {% endfor %}#}
+{#</div>#}
+{##}
+{#<table class="">#}
+{#    {% for milestone in milestones %}#}
+{#    <tr>#}
+{#        <td>{{ milestone.Date }}</td>#}
+{#        <td>{{ milestone.Content }}</td>#}
+{#    </tr>#}
+{#    {% endfor %}#}
+{#</table>#}
+<footer>Copyright &copy;2014 by Mingwei Wei</footer>
+</body>
+</html>
