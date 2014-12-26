@@ -6,35 +6,42 @@ body{
 }
 
 #msNav{
-    width: 80%;
-    margin-left: 10%;
+    width: 880px;
+    margin: auto;
+    /*margin-left: 10%;*/
     margin-top: 20px;
 }
 
 #msBox_body{
-    width: 80%;
-    margin-left: 10%;
+    /*width: 80%;*/
+    /*margin-left: 10%;*/
+    width: 880px;
+    margin: auto;
     min-height: 300px;
     height: 300px;
+    margin-top: 20px;
 }
 
 #msBox_bodyleft{
     float: left;
-    width: 15%;
+    width: 130px;
+
     height: 300px;
 }
 
 #msBox_bodyright{
     float: right;
-    width: 83.8%;
+    width: 745px;
+    position: relative;
 }
 
 #msBox_record{
     background-color: #34495e;
     border-radius: 6px;
     margin-top: 20px;
-    width: 851px;
+    width: 880px;
     float: left;
+    position: relative;
 }
 
 @keyframes choose_colorChange{
@@ -53,6 +60,10 @@ body{
     from{border: 2px solid #bdc3c7;}
     to {border: 2px solid #eaeaea;}
 }
+#milestone_form{
+    width: 725px;
+    float: right;
+}
 #msContent:focus{
     animation:choose_colorChange 0.5s;
     -moz-animation: choose_colorChange 0.5s;
@@ -65,9 +76,10 @@ body{
     background: url("/static/img/inlet_arrow_bg.gif") -260px -40px no-repeat;
     width: 14px;
     height: 28px;
+    float: left;
     position: absolute;
-    left: 22.28%;
-    top: 128px;
+    left: 8px;
+    margin-top: 22px;
     z-index: 999;
 }
 
@@ -78,9 +90,10 @@ ul.nav{
 
 .datetimepicker{
 	height: 20px;
-	width: 880px;
+	width: 863px;
+    margin: auto;
     margin-top: 10px;
-    margin-right: auto;
+    /*margin-right: auto;*/
 }
 .select{
 	width: 28px;
@@ -151,13 +164,16 @@ footer{
 }
 
 #mshBox_body{
-    width: 80%;
-    margin-left: 10%;
+    width: 880px;
+    /*margin-left: 10%;*/
+    margin: auto;
 }
 
 #mshBox_bodyleft{
-    float: left;
-    width:65%;
+    /*float: left;*/
+    /*width:65%;*/
+    margin: auto;
+    position: relative;
 }
 
 #mshBox_bodyright{
@@ -165,8 +181,20 @@ footer{
     margin-top: 10px;
 }
 #mshBox_bodyleft_recordBox{
-    color: #e6b450;
+    color: #1abc9c;
     font-size: 13px;
-    margin-top: 15px;
-    margin-left: 20px;
+    /*margin-top: 15px;*/
+    /*margin-left: 20px;*/
+    background-color: #ffffff;
+    width: 196px;
+}
+#mshBox_bodyleft_recordBox p{
+    font-size: 15px;
+    margin: 5px 8px 5px 8px;
+}
+
+#avatar{
+    /*margin-top: 30px;*/
+    height: 130px;
+    width: 130px;
 }
