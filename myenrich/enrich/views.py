@@ -40,3 +40,13 @@ def milestone_history_msBox_record(request):
     t = loader.get_template("milestone_history_msBox_record.html")
     c = Context({'milestones': ms})
     return  HttpResponse(t.render(c))
+
+def delete_milestone(request):
+    id = request.REQUEST["id"]
+    Milestone.objects.filter(id = id).delete()
+    return  HttpResponse('true')
+def update_milestone(request):
+    id = request.REQUEST["id"]
+    content = request.REQUEST["content"]
+    Milestone.objects.filter(id = id).update(Content = content)
+    return  HttpResponse('true')

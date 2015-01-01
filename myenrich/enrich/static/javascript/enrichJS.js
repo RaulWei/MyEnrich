@@ -51,15 +51,19 @@ $(document).ready(function(){
       $("#day"+i).click(function(){
         var id=this.id.substr(3);
         var time= selectyear+"年" + selectmonth + "月" + id + "日";
+        if(selectmonth < 10){
+            selectmonthM = '0' + selectmonth;
+        }
         if (id < 10){
-            var day = selectyear+"-"+selectmonth+"-0"+id;
+            var day = selectyear+"-"+selectmonthM+"-0"+id;
         }
         else{
-            var day = selectyear+"-"+selectmonth+"-"+id;
+            var day = selectyear+"-"+selectmonthM+"-"+id;
         }
 	    //	$("#day"+id).css({"width":"25px","height":"22px","line-height":"22px","margin-top":"-6px"});
 
         //这里填写你要进行的操作
+        $("#everydaylist").data('day',day);
         $("#msBox_record").load("/enrich/milestone_history_msBox_record?select_day="+day);
       })
     }
