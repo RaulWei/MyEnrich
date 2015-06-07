@@ -4,10 +4,8 @@
     <data-source source="LOCAL" name="Django default" uuid="5626555a-2b6c-44ba-99d6-e7885dbc062b">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://:3306/myenrich</jdbc-url>
-      <user-name>root</user-name>
+      <jdbc-url>jdbc:sqlite:D:\MyWorkspace\PyCharm\MyEnrich\myenrich\db.sqlite3</jdbc-url>
       <libraries />
     </data-source>
   </component>
 </project>
-

@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-import MySQLdb
+#import MySQLdb
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -59,14 +59,14 @@ WSGI_APPLICATION = 'myenrich.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myenrich',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'django.db.backends.mysql',
+        #'NAME': 'myenrich',
+        #'USER': 'root',
+        #'PASSWORD': '',
+        #'HOST': '',
+        #'PORT': '3306',
     }
 }
 
