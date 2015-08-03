@@ -5,7 +5,6 @@ from django.http import HttpResponse,Http404
 from enrich.models import Milestone
 import datetime
 
-
 # Create your views here.
 
 def enrich(request):
@@ -39,14 +38,14 @@ def milestone_history_msBox_record(request):
     ms = Milestone.objects.filter(Date=select_day)
     t = loader.get_template("milestone_history_msBox_record.html")
     c = Context({'milestones': ms})
-    return  HttpResponse(t.render(c))
+    return HttpResponse(t.render(c))
 
 def delete_milestone(request):
     id = request.REQUEST["id"]
     Milestone.objects.filter(id = id).delete()
-    return  HttpResponse('true')
+    return HttpResponse('true')
 def update_milestone(request):
     id = request.REQUEST["id"]
     content = request.REQUEST["content"]
     Milestone.objects.filter(id = id).update(Content = content)
-    return  HttpResponse('true')
+    return HttpResponse('true')
