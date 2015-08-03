@@ -44,3 +44,14 @@ Temporary Items
 
 # User add
 *.pyc
+
+# Python related
+.idea
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+sqlite3.exe
+dist
+build
+*.iml
