@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link type="text/css" rel="stylesheet" href="http://libs.baidu.com/bootstrap/2.3.2/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="/static/css/flat-ui.css" />
     <link type="text/css" rel="stylesheet" href="/static/css/rotateBall.css"/>
     <link type="text/css" rel="stylesheet" href="/static/css/enrichCss.css" />
     <style type="text/css">
-        #timeline {width: 880px;height: 230px;overflow: hidden;margin: auto;position: relative;background-color: #34495e;}
+        #timeline {width: 80%;height: 230px;overflow: hidden;margin-left: 10%;position: relative;background-color: #34495e;}
         #dates {width: 760px;height: 60px;overflow: hidden;}
         #dates li {list-style: none;float: left;width: 100px;height: 50px;font-size: 14px;text-align: center;background: url('biggerdot.png') center bottom no-repeat;}
         #dates a {line-height: 48px;padding-bottom: 10px;}
@@ -51,15 +51,14 @@
 <div name="msBox_body" id="msBox_body">
     <div name="msBox_bodyleft" id="msBox_bodyleft">
         <!--<button class="btn" >bodyleft</button>-->
-        <img src="/static/img/2.jpg" id="avatar">
+        <img src="/static/img/2.jpg" height="68%" width="92%">
     </div>
     <div name="msBox_bodyright" id="msBox_bodyright">
         <div class="inlet_arrow_bg">&nbsp;</div>
-        <form method="post" enctype="multipart/form-data" id="milestone_form">
+        <form method="post" enctype="multipart/form-data" id="milestone_form" style="display: inline">
             <textarea rows="9" cols="70" class="form-control" name="msContent" id="msContent" style="resize: none"></textarea>
             <div>
-               <button class="btnM btn-success " type="submit">添加里程碑</button>
-               <!-- <input value="添加里程碑" class="btn btn-success " type="submit" style="margin-top: 10px; float: right" />-->
+                <input value="添加里程碑" class="btn btn-success " type="submit" style="margin-top: 10px; float: right" />
             </div>
         </form>
     </div>
