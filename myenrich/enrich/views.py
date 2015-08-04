@@ -16,9 +16,10 @@ def enrich(request):
         ms.save()
 
     milestones = Milestone.objects.all()
-    t = loader.get_template("milestone.html")
-    c = Context({'milestones': milestones})
-    return HttpResponse(t.render(c))
+    return render(request, "milestone.html", {'milestones': milestones})
+    # t = loader.get_template("milestone.html")
+    # c = Context({'milestones': milestones})
+    # return HttpResponse(t.render(c))
 
 def milestone_history(request):
     t = loader.get_template("milestone_history.html")

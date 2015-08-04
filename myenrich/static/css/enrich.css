@@ -2,7 +2,20 @@
 
 body{
     background-color: #f2f2f2;
-    /*background-image: url(/static/img/Blur-6.jpg);*/
+    background-image: url(/static/img/Blur-6.jpg);
+}
+
+.myDelete{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor:pointer;
+}
+.myEdit{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    cursor:pointer;
 }
 
 #msNav{
@@ -10,6 +23,10 @@ body{
     margin: auto;
     /*margin-left: 10%;*/
     margin-top: 20px;
+    height:51px;
+}
+#msNav .nav{
+   float:right;
 }
 
 #msBox_body{
@@ -40,7 +57,6 @@ body{
     border-radius: 6px;
     margin-top: 20px;
     width: 880px;
-    float: left;
     position: relative;
 }
 
@@ -63,6 +79,10 @@ body{
 #milestone_form{
     width: 725px;
     float: right;
+}
+#milestone_form textarea{
+    width:700px;
+    height:auto;
 }
 #msContent:focus{
     animation:choose_colorChange 0.5s;
@@ -180,7 +200,7 @@ footer{
     float: right;
     margin-top: 10px;
 }
-#mshBox_bodyleft_recordBox{
+.recordBox{
     color: #1abc9c;
     font-size: 13px;
     /*margin-top: 15px;*/
@@ -188,7 +208,7 @@ footer{
     background-color: #ffffff;
     width: 196px;
 }
-#mshBox_bodyleft_recordBox p{
+.recordBox p{
     font-size: 15px;
     margin: 5px 8px 5px 8px;
 }
@@ -197,4 +217,22 @@ footer{
     /*margin-top: 30px;*/
     height: 130px;
     width: 130px;
+}
+.btnM{
+    border: none;
+font-size: 15px;
+font-weight: normal;
+line-height: 1.4;
+border-radius: 4px;
+padding: 10px 15px;
+float:right;
+margin-top:10px;
+}
+.content .btnM{
+   padding: 4px 10px;
+   margin:5px ;
+}
+.recordBox{
+  float:left;
+
 }
