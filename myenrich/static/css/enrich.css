@@ -2,7 +2,7 @@
 
 body{
     background-color: #f2f2f2;
-    background-image: url(/static/img/Blur-6.jpg);
+    /*background-image: url(/static/img/Blur-6.jpg);*/
 }
 
 .myDelete{
@@ -25,9 +25,9 @@ body{
     margin-top: 20px;
     height:51px;
 }
-#msNav .nav{
-   float:right;
-}
+/*#msNav .nav{*/
+   /*float:right;*/
+/*}*/
 
 #msBox_body{
     /*width: 80%;*/
