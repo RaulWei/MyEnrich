@@ -1,12 +1,12 @@
+{% if not milestones %}
+    <p>今天没有里程碑 :(</p>
+{% endif %}
 {% for milestone in milestones %}
-    {% if not forloop.counter %}
-        <p>今天没有里程碑</p>
-    {% endif %}
     <div class="recordBox" name="recordBox"  milesId="{{ milestone.id }}">
         <p>{{ milestone.Date }}</p>
 {#	<i class="icon-remove myDelete glyphicon "></i>#}
         <span class="glyphicon glyphicon-remove myDelete" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-edit myEdit" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-edit myEdit" aria-hidden="true"></span>
 {#        <i class="icon-edit myEdit"></i>#}
         <div class="content">
            <p>{{ milestone.Content }}</p>
@@ -36,7 +36,6 @@
       resetWookmark();
       $(".myDelete").click(function(){
          if (confirm("确定删除？")){
-            
             var day = $("#everydaylist").data('day');
             var id = $(this).parent().attr("milesid");
             var data = {'id':id};
@@ -93,15 +92,5 @@
             resetWookmark();
          }
       });
-        // Capture clicks on grid items.
-     // handler.click(function(){
-        // Randomize the height of the clicked item.
-      //  var newHeight = $('img', this).height() + Math.round(Math.random() * 300 + 30);
-       // $(this).css('height', newHeight+'px');
-
-        // Update the layout.
-       // handler.wookmark();
-     // });
-
     })(jQuery);
 </script>
