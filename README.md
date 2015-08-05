@@ -4,10 +4,17 @@ Record what I do everyday to enrich my life.
 ## 功能
 - 记录当日里程碑
 - 查看往日里程碑
+- 修改往日里程碑
+- 删除往日里程碑
 
 ## 包依赖
 * python == 2.7.9
 * Django == 1.6.5
+* bootstrap == 3.0.0
+* jquery == 1.10.2
+* flat-ui == unknown
+* jquery.timelinr == 0.9.53
+* jquery.wookmark == unknown
 
 ## 效果展示
 - 记录今日里程碑
