@@ -2,7 +2,6 @@
 
 body{
     background-color: #f2f2f2;
-    /*background-image: url(/static/img/Blur-6.jpg);*/
 }
 
 .myDelete{
@@ -21,17 +20,11 @@ body{
 #msNav{
     width: 880px;
     margin: auto;
-    /*margin-left: 10%;*/
     margin-top: 20px;
     height:51px;
 }
-/*#msNav .nav{*/
-   /*float:right;*/
-/*}*/
 
 #msBox_body{
-    /*width: 80%;*/
-    /*margin-left: 10%;*/
     width: 880px;
     margin: auto;
     min-height: 300px;
@@ -42,7 +35,6 @@ body{
 #msBox_bodyleft{
     float: left;
     width: 130px;
-
     height: 300px;
 }
 
@@ -80,10 +72,7 @@ body{
     width: 725px;
     float: right;
 }
-#milestone_form textarea{
-    width:700px;
-    height:auto;
-}
+
 #msContent:focus{
     animation:choose_colorChange 0.5s;
     -moz-animation: choose_colorChange 0.5s;
@@ -113,7 +102,6 @@ ul.nav{
 	width: 863px;
     margin: auto;
     margin-top: 10px;
-    /*margin-right: auto;*/
 }
 .select{
 	width: 28px;
@@ -142,7 +130,6 @@ ul.nav{
 .day{
 	float: left;
 	margin-left: 30px;
-
 }
 #everydaylist{
 	font-size:18px;
@@ -167,7 +154,6 @@ ul.nav{
 	-ms-transition:margin-top 0.5s,width 0.5s;
 	-o-transition:margin-top 0.5s,width 0.5s;
 	-moz-transition:margin-top 0.5s,width 0.5s;
-
 }
 
 #everydaylist li:hover{
@@ -185,13 +171,10 @@ footer{
 
 #mshBox_body{
     width: 880px;
-    /*margin-left: 10%;*/
     margin: auto;
 }
 
 #mshBox_bodyleft{
-    /*float: left;*/
-    /*width:65%;*/
     margin: auto;
     position: relative;
 }
@@ -203,8 +186,6 @@ footer{
 .recordBox{
     color: #1abc9c;
     font-size: 13px;
-    /*margin-top: 15px;*/
-    /*margin-left: 20px;*/
     background-color: #ffffff;
     width: 196px;
 }
@@ -214,25 +195,33 @@ footer{
 }
 
 #avatar{
-    /*margin-top: 30px;*/
     height: 130px;
     width: 130px;
 }
+
 .btnM{
     border: none;
-font-size: 15px;
-font-weight: normal;
-line-height: 1.4;
-border-radius: 4px;
-padding: 10px 15px;
-float:right;
-margin-top:10px;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.4;
+    border-radius: 4px;
+    padding: 10px 15px;
+    float:right;
+    margin-top:10px;
 }
+
 .content .btnM{
    padding: 4px 10px;
    margin:5px ;
 }
+
 .recordBox{
   float:left;
+}
 
+.no-milestone{
+    padding: 5px;
+    padding-left: 10px;
+    color: #e6b450;
+    font-size: 15px;
 }
