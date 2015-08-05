@@ -7,9 +7,4 @@ class Milestone(models.Model):
     Content = models.CharField(max_length=500)
     Date = models.CharField(max_length=200)
 
-
-class MilestoneAdmin(admin.ModelAdmin):
-    list_display = ('id', 'Date', 'Content')
-
-
-admin.site.register(Milestone, MilestoneAdmin)
+admin.site.register(Milestone)
