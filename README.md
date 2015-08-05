@@ -10,7 +10,7 @@ Record what I do everyday to enrich my life.
 * Django == 1.6.5
 
 ## 效果展示
-<img src='/pic/milestone.jpg' width=550 />
+<img src='/pic/milestone.jpg' width=750 />
 <img src='/pic/history.jpg' width=550 />
 <img src='/pic/no-history.jpg' width=550 />
 
