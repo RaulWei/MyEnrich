@@ -1,7 +1,7 @@
 # system import
 from django.shortcuts import render
 from django.template import loader,Context
-from django.http import HttpResponse,Http404
+from django.http import HttpResponse
 from enrich.models import Milestone
 import datetime
 
