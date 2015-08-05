@@ -10,9 +10,14 @@ Record what I do everyday to enrich my life.
 * Django == 1.6.5
 
 ## 效果展示
+- 记录今日里程碑
 <img src='/pic/milestone.jpg' width=750 />
-<img src='/pic/history.jpg' width=550 />
-<img src='/pic/no-history.jpg' width=550 />
+
+- 往日里程碑展示
+<img src='/pic/history.jpg' width=750 />
+
+- 空里程碑展示
+<img src='/pic/no-history.jpg' width=750 />
 
 ## 注
 - [Django静态文件配置](http://blog.csdn.net/hireboy/article/details/8806098)
