@@ -33,3 +33,4 @@ Record what I do everyday to enrich my life.
   2. 更新SAE生成的config.yaml（如果没有用SAE带的python库，这块不更新）
   3. 更新settings.py （包括SAE头文件，变量定义，数据库）
   4. 自建site-packages包
+- 数据库及superuser 用户名[admin] 密码[admin]
