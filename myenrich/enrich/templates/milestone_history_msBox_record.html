@@ -1,13 +1,13 @@
 {% if not milestones %}
-    <p>今天没有里程碑 :(</p>
+    <div class="recordBox" name="recordBox">
+        <p class="no-milestone">今天没有里程碑 :(</p>
+    </div>
 {% endif %}
 {% for milestone in milestones %}
     <div class="recordBox" name="recordBox"  milesId="{{ milestone.id }}">
         <p>{{ milestone.Date }}</p>
-{#	<i class="icon-remove myDelete glyphicon "></i>#}
         <span class="glyphicon glyphicon-remove myDelete" aria-hidden="true"></span>
         <span class="glyphicon glyphicon-edit myEdit" aria-hidden="true"></span>
-{#        <i class="icon-edit myEdit"></i>#}
         <div class="content">
            <p>{{ milestone.Content }}</p>
         </div>
@@ -21,20 +21,20 @@
 
 <script type="text/javascript">
     (function ($){
-      var handler = $('#msBox_record .recordBox');
-      function resetWookmark(){
+
+        var handler = $('#msBox_record .recordBox');
+        function resetWookmark(){
           handler.wookmark({
-          // Prepare layout options.
               autoResize: false, // This will auto-update the layout when the browser window is resized.
               container: $('#msBox_record'), // Optional, used for some extra CSS styling
               offset: 10, // Optional, the distance between grid items
               outerOffset: 25, // Optional, the distance to the containers border
               itemWidth: 200, // Optional, the width of a grid item
               verticalOffset: 25
-          });    
-      }
-      resetWookmark();
-      $(".myDelete").click(function(){
+          });
+        }
+        resetWookmark();
+        $(".myDelete").click(function(){
          if (confirm("确定删除？")){
             var day = $("#everydaylist").data('day');
             var id = $(this).parent().attr("milesid");
@@ -49,15 +49,14 @@
                 },
             });
          }
-      });
-      function resetContent($mile){
+        });
+        function resetContent($mile){
           var content = $mile.data('content');
-          var $parent = $mile.parent();
           if (typeof (content) !== 'undefined'){
               $mile.find('.content').html('<p>'+content+'</p>');
           }
-      }
-      function changeContent($mile){
+        }
+        function changeContent($mile){
          //检查是否有处于编辑状态的里程碑,只能有一个为编辑状态
          var $parent = $mile.parent();
          if(typeof ($parent.data('mile')) !== 'undefined'){
@@ -66,9 +65,9 @@
          $parent.data('mile',$mile)
          var content = $mile.find('.content p').text();
          $mile.data('content',content);
-         $mile.find('.content').html('<textarea rows="2"  class="form-control" name="msContent" style="margin-left:8px;padding:0px;width:auto">'+content+'</textarea><button class="btnM btn-success pull-right" type="button">提交</button>');
-      }
-      $(".myEdit").click(function(){
+         $mile.find('.content').html('<textarea rows="2"  class="form-control" name="msContent" style="margin-left:8px;padding:0px;width:auto;resize:vertical">'+content+'</textarea><button class="btnM btn-success pull-right" type="button">提交</button>');
+        }
+        $(".myEdit").click(function(){
          if (confirm("确定修改？")){
             var $mile = $(this).parent();
             changeContent($mile);
@@ -91,6 +90,6 @@
             });
             resetWookmark();
          }
-      });
+        });
     })(jQuery);
 </script>
